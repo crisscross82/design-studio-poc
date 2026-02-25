@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AiSU Design System - Password Protected</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .auth-container {
+      background: white;
+      padding: 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    p {
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .error {
+      color: #ef4444;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    .error.show {
+      display: block;
+    }
+
+    .hint {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f1f5f9;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    .hint strong {
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <h1>AiSU Design System</h1>
+    <p>Design Studio POC - Password Protected Preview</p>
+
+    <form id="authForm">
+      <div class="form-group">
+        <label for="password">Enter Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter access code"
+          autocomplete="off"
+        />
+        <div class="error" id="error">Incorrect password. Please try again.</div>
+      </div>
+
+      <button type="submit">View Design Preview</button>
+    </form>
+
+    <div class="hint">
+      <strong>Demo Access:</strong> Use password <code>aisu2026</code> to view the design system preview.
+    </div>
+  </div>
+
+  <script>
+    // Simple password protection (client-side)
+    // For production, use server-side authentication
+    const VALID_PASSWORD = 'aisu2026';
+
+    document.getElementById('authForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const password = document.getElementById('password').value;
+      const error = document.getElementById('error');
+
+      if (password === VALID_PASSWORD) {
+        // Store auth in sessionStorage
+        sessionStorage.setItem('aisu_auth', 'true');
+        // Redirect to preview
+        window.location.href = 'design-preview.html';
+      } else {
+        error.classList.add('show');
+        document.getElementById('password').value = '';
+        document.getElementById('password').focus();
+      }
+    });
+
+    // Auto-focus password field
+    document.getElementById('password').focus();
+  </script>
+</body>
+</html>

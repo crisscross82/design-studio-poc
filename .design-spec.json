@@ -1,0 +1,610 @@
+{
+  "$schema": "./design-spec-schema.json",
+  "version": "1.0.0",
+  "metadata": {
+    "project": "AiSU Marketing Homepage",
+    "scope": "marketing-homepage",
+    "created": "2026-02-25T18:30:00Z",
+    "session_duration": "18_minutes",
+    "author": "design-studio-poc"
+  },
+  "project_context": {
+    "type": "marketing-website",
+    "goal": "product-focused-conversion",
+    "audience": "broad-b2b",
+    "target_visitors": [
+      "business-professionals",
+      "executives-decision-makers",
+      "technical-users"
+    ],
+    "tone_balance": "professional-accessible"
+  },
+  "style": {
+    "aesthetic": "modern-bold",
+    "inspiration": {
+      "primary": "stripe-professional",
+      "secondary": "linear-confident",
+      "description": "Trustworthy like Stripe, bold like Linear"
+    },
+    "characteristics": {
+      "typography": "bold-hierarchy",
+      "animations": "fast-purposeful",
+      "layout": "structured-grid",
+      "vibe": "trustworthy-confident"
+    },
+    "references": [
+      "https://stripe.com",
+      "https://linear.app",
+      "https://vercel.com"
+    ],
+    "density": "balanced",
+    "grid": "structured"
+  },
+  "colors": {
+    "mode": "light-and-dark",
+    "priority": "equal",
+    "dark_strategy": "elevated-dark",
+    "palette": {
+      "name": "navy-electric",
+      "primary": {
+        "name": "Navy",
+        "hex": "#1e3a8a",
+        "hsl": {
+          "h": 220,
+          "s": 80,
+          "l": 25
+        },
+        "scale": {
+          "50": "#eff6ff",
+          "100": "#dbeafe",
+          "200": "#bfdbfe",
+          "300": "#93c5fd",
+          "400": "#60a5fa",
+          "500": "#3b82f6",
+          "600": "#2563eb",
+          "700": "#1d4ed8",
+          "800": "#1e40af",
+          "900": "#1e3a8a",
+          "950": "#172554"
+        }
+      },
+      "accent": {
+        "name": "Electric Blue",
+        "hex": "#3b82f6",
+        "hsl": {
+          "h": 217,
+          "s": 91,
+          "l": 60
+        },
+        "scale": {
+          "50": "#eff6ff",
+          "100": "#dbeafe",
+          "200": "#bfdbfe",
+          "300": "#93c5fd",
+          "400": "#60a5fa",
+          "500": "#3b82f6",
+          "600": "#2563eb",
+          "700": "#1d4ed8",
+          "800": "#1e40af",
+          "900": "#1e3a8a"
+        }
+      },
+      "semantic": {
+        "success": {
+          "hex": "#10b981",
+          "name": "Emerald",
+          "auto_generated": true
+        },
+        "warning": {
+          "hex": "#f59e0b",
+          "name": "Amber",
+          "auto_generated": true
+        },
+        "error": {
+          "hex": "#ef4444",
+          "name": "Red",
+          "auto_generated": true
+        },
+        "info": {
+          "hex": "#3b82f6",
+          "name": "Electric Blue",
+          "auto_generated": true
+        }
+      },
+      "neutral": {
+        "light": {
+          "background": "#ffffff",
+          "foreground": "#0f172a",
+          "muted": "#f1f5f9",
+          "muted_foreground": "#64748b",
+          "border": "#e2e8f0",
+          "input": "#e2e8f0",
+          "ring": "#1e3a8a"
+        },
+        "dark": {
+          "background": "#0f172a",
+          "foreground": "#f1f5f9",
+          "muted": "#1e293b",
+          "muted_foreground": "#94a3b8",
+          "border": "#334155",
+          "input": "#334155",
+          "ring": "#3b82f6"
+        }
+      }
+    },
+    "contrast_validation": {
+      "level": "WCAG_AAA",
+      "results": {
+        "primary_on_white": {
+          "ratio": 13.2,
+          "passes": true
+        },
+        "accent_on_white": {
+          "ratio": 4.6,
+          "passes": true
+        },
+        "primary_on_dark": {
+          "ratio": 8.1,
+          "passes": true
+        }
+      }
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": {
+        "family": "Inter",
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+        "weights": [400, 500, 600, 700, 800],
+        "fallback": "sans-serif",
+        "variable": true
+      },
+      "body": {
+        "family": "Inter",
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
+        "weights": [400, 500, 600],
+        "fallback": "sans-serif",
+        "variable": true
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+        "weights": [400, 500],
+        "fallback": "monospace"
+      }
+    },
+    "scale": {
+      "base": 16,
+      "ratio": 1.25,
+      "sizes": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem",
+        "7xl": "4.5rem"
+      }
+    },
+    "line_height": {
+      "tight": 1.2,
+      "normal": 1.5,
+      "relaxed": 1.6,
+      "loose": 1.8
+    },
+    "letter_spacing": {
+      "tighter": "-0.02em",
+      "tight": "-0.01em",
+      "normal": "0em",
+      "wide": "0.01em",
+      "wider": "0.02em"
+    },
+    "usage": {
+      "heading": {
+        "font": "Inter",
+        "weight": 700,
+        "line_height": "tight",
+        "letter_spacing": "tighter"
+      },
+      "body": {
+        "font": "Inter",
+        "weight": 400,
+        "line_height": "relaxed",
+        "letter_spacing": "normal"
+      },
+      "body_medium": {
+        "font": "Inter",
+        "weight": 500,
+        "line_height": "relaxed",
+        "letter_spacing": "normal"
+      }
+    }
+  },
+  "spacing": {
+    "base": 4,
+    "density": "balanced",
+    "scale": {
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem",
+      "2xl": "3rem",
+      "3xl": "4rem",
+      "4xl": "6rem",
+      "5xl": "8rem"
+    },
+    "section_padding": {
+      "strategy": "responsive",
+      "mobile": {
+        "y": "3rem",
+        "x": "1rem"
+      },
+      "tablet": {
+        "y": "4rem",
+        "x": "2rem"
+      },
+      "desktop": {
+        "y": "5rem",
+        "x": "3rem"
+      }
+    }
+  },
+  "layout": {
+    "container": {
+      "max_width": "1280px",
+      "padding": {
+        "mobile": "1rem",
+        "desktop": "2rem"
+      }
+    },
+    "grid": {
+      "columns": 12,
+      "gap": {
+        "mobile": "1rem",
+        "desktop": "2rem"
+      }
+    },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    }
+  },
+  "effects": {
+    "border_radius": {
+      "sm": "0.25rem",
+      "base": "0.5rem",
+      "md": "0.75rem",
+      "lg": "1rem",
+      "xl": "1.5rem",
+      "full": "9999px"
+    },
+    "shadows": {
+      "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "base": "0 1px 3px 0 rgb(0 0 0 / 0.1)",
+      "md": "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+      "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+      "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1)",
+      "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)"
+    },
+    "blur": {
+      "sm": "4px",
+      "base": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px"
+    },
+    "transitions": {
+      "fast": "150ms",
+      "base": "200ms",
+      "slow": "300ms",
+      "slower": "400ms"
+    }
+  },
+  "animations": {
+    "intensity": "fast-purposeful",
+    "speed": "150-200ms",
+    "style": "linear-inspired",
+    "preferences": {
+      "scroll_animations": true,
+      "hover_animations": true,
+      "page_transitions": false,
+      "parallax": false,
+      "3d_effects": false,
+      "count_up_animations": true,
+      "stagger_animations": true
+    },
+    "easing": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "in": "cubic-bezier(0.4, 0, 1, 1)",
+      "out": "cubic-bezier(0, 0, 0.2, 1)",
+      "in_out": "cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  },
+  "components": {
+    "style": "soft-rounded",
+    "to_create": [
+      {
+        "name": "TestimonialCard",
+        "category": "social-proof",
+        "variants": ["single", "grid", "carousel"],
+        "priority": "high",
+        "estimated_time": "45min",
+        "features": [
+          "Customer quote",
+          "Avatar (placeholder)",
+          "Name and title",
+          "Company logo",
+          "Star rating (optional)"
+        ]
+      },
+      {
+        "name": "LogoCloud",
+        "category": "social-proof",
+        "variants": ["static", "infinite-scroll"],
+        "priority": "high",
+        "estimated_time": "40min",
+        "features": [
+          "Customer logos in grid",
+          "Infinite scroll animation",
+          "Grayscale with hover color",
+          "Responsive (fewer logos on mobile)"
+        ]
+      },
+      {
+        "name": "StatsCounter",
+        "category": "social-proof",
+        "variants": ["default", "large"],
+        "priority": "high",
+        "estimated_time": "35min",
+        "features": [
+          "Count-up animation on scroll",
+          "Large number display",
+          "Label/description",
+          "Icon (optional)",
+          "Responsive grid"
+        ]
+      }
+    ],
+    "to_enhance": [
+      {
+        "name": "Hero",
+        "variant_to_add": "split-with-demo",
+        "priority": "high",
+        "estimated_time": "30min",
+        "changes": [
+          "Two-column layout (content left, demo right)",
+          "Bold headline (5xl-7xl)",
+          "Value proposition subtext",
+          "Primary + secondary CTA buttons",
+          "Product screenshot/demo placeholder",
+          "Navy gradient background"
+        ]
+      },
+      {
+        "name": "Features",
+        "variant_to_add": "bento-grid",
+        "priority": "high",
+        "estimated_time": "45min",
+        "changes": [
+          "Asymmetric grid (mixed sizes)",
+          "Feature cards with icons",
+          "Screenshots/visuals",
+          "Hover animations",
+          "4-6 features displayed"
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "home": {
+      "layout": "product-led-growth",
+      "layout_description": "Focus on product demo and social proof, drive conversions",
+      "conversion_path": "Demo → Trust → Metrics → Features → Validation → Pricing → Convert",
+      "sections": [
+        {
+          "order": 1,
+          "type": "hero",
+          "variant": "split-with-demo",
+          "config": {
+            "heading": "Transform Your Knowledge Base with AI",
+            "subheading": "Instantly search across all your documents with natural language. Connect Google Drive, OneDrive, and more.",
+            "height": "90vh",
+            "background": "navy-gradient",
+            "cta_primary": "Start Free Trial",
+            "cta_secondary": "Watch Demo",
+            "demo_type": "screenshot",
+            "demo_position": "right"
+          }
+        },
+        {
+          "order": 2,
+          "type": "logo-cloud",
+          "variant": "infinite-scroll",
+          "config": {
+            "heading": "Trusted by leading companies",
+            "background": "light",
+            "animation_speed": "slow"
+          }
+        },
+        {
+          "order": 3,
+          "type": "stats",
+          "variant": "3-column",
+          "config": {
+            "background": "navy",
+            "stats": [
+              {
+                "value": "10M+",
+                "label": "Documents Indexed",
+                "icon": "document"
+              },
+              {
+                "value": "99.9%",
+                "label": "Uptime SLA",
+                "icon": "shield"
+              },
+              {
+                "value": "50ms",
+                "label": "Avg Response Time",
+                "icon": "zap"
+              }
+            ]
+          }
+        },
+        {
+          "order": 4,
+          "type": "features",
+          "variant": "bento-grid",
+          "config": {
+            "heading": "Everything you need to unlock your knowledge",
+            "subheading": "Connect your data sources, ask questions in plain English, and get instant answers with citations.",
+            "features": [
+              {
+                "title": "AI-Powered Search",
+                "description": "Natural language queries across all your documents",
+                "icon": "search",
+                "size": "large"
+              },
+              {
+                "title": "Multi-Source Integration",
+                "description": "Google Drive, OneDrive, Gmail, Calendar, and more",
+                "icon": "link",
+                "size": "medium"
+              },
+              {
+                "title": "Smart Indexing",
+                "description": "Automatic classification and metadata extraction",
+                "icon": "sparkles",
+                "size": "medium"
+              },
+              {
+                "title": "Secure & Compliant",
+                "description": "Enterprise-grade security with SOC 2 compliance",
+                "icon": "lock",
+                "size": "small"
+              }
+            ]
+          }
+        },
+        {
+          "order": 5,
+          "type": "testimonials",
+          "variant": "grid-3-column",
+          "config": {
+            "heading": "Loved by teams worldwide",
+            "background": "light",
+            "testimonials": [
+              {
+                "quote": "AiSU transformed how our team finds information. What used to take hours now takes seconds.",
+                "author": "Sarah Johnson",
+                "title": "VP of Operations",
+                "company": "TechCorp",
+                "avatar": "placeholder"
+              },
+              {
+                "quote": "The natural language search is incredible. It understands context and finds exactly what we need.",
+                "author": "Michael Chen",
+                "title": "Engineering Manager",
+                "company": "DataFlow",
+                "avatar": "placeholder"
+              },
+              {
+                "quote": "Integration was seamless. We were up and running in less than an hour.",
+                "author": "Emily Rodriguez",
+                "title": "CTO",
+                "company": "GrowthLabs",
+                "avatar": "placeholder"
+              }
+            ]
+          }
+        },
+        {
+          "order": 6,
+          "type": "pricing",
+          "variant": "comparison-table",
+          "config": {
+            "heading": "Simple, transparent pricing",
+            "subheading": "Choose the plan that fits your organization size",
+            "billing_toggle": true,
+            "tiers": ["professional", "small", "medium", "large"]
+          }
+        },
+        {
+          "order": 7,
+          "type": "cta",
+          "variant": "centered-with-benefits",
+          "config": {
+            "heading": "Ready to transform your knowledge base?",
+            "subheading": "Join thousands of teams using AiSU to unlock their data",
+            "cta_primary": "Start Free Trial",
+            "cta_secondary": "Schedule Demo",
+            "background": "navy",
+            "benefits": [
+              "14-day free trial",
+              "No credit card required",
+              "Cancel anytime",
+              "Full feature access"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "assets": {
+    "generation_strategy": "ai-powered",
+    "providers": ["dall-e-3", "stable-diffusion"],
+    "poc_approach": "color-matched-placeholders",
+    "full_implementation": "automatic-generation-from-spec",
+    "image_prompts": {
+      "hero_background": "Abstract geometric background pattern, navy blue (#1e3a8a) and electric blue (#3b82f6), modern minimalist style, high contrast, professional, suitable for SaaS website hero section, clean lines, 16:9 aspect ratio",
+      "feature_icons": "Minimalist line icons set for [search, link, sparkles, lock], navy blue (#1e3a8a), geometric style, 24px, professional, consistent style",
+      "testimonial_avatars": "Abstract geometric avatar, navy blue and electric blue color scheme, professional, modern, suitable for B2B testimonials",
+      "stats_background": "Subtle geometric pattern background, navy blue gradient, dots and lines, minimal, not distracting, suitable for stats section"
+    }
+  },
+  "accessibility": {
+    "target_level": "WCAG_AA",
+    "requirements": {
+      "color_contrast": "4.5:1 minimum",
+      "font_size_minimum": "16px",
+      "touch_target_minimum": "44px",
+      "keyboard_navigation": "required",
+      "screen_reader_labels": "required",
+      "focus_indicators": "visible",
+      "reduced_motion_support": "required"
+    }
+  },
+  "performance": {
+    "targets": {
+      "lighthouse_score": 90,
+      "first_contentful_paint": "1.5s",
+      "largest_contentful_paint": "2.5s",
+      "cumulative_layout_shift": 0.1,
+      "time_to_interactive": "3.0s"
+    }
+  },
+  "implementation": {
+    "estimated_time_hours": 5.5,
+    "estimated_cost_usd": 18,
+    "wave_count": 6,
+    "component_count": 5,
+    "quality_gates": [
+      "typescript-strict",
+      "eslint-no-errors",
+      "unit-tests-passing",
+      "accessibility-wcag-aa",
+      "storybook-stories",
+      "visual-regression-baseline",
+      "responsive-validated",
+      "build-successful"
+    ]
+  }
+}
